@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "e82305b7-ff9c-4c84-8de6-b826113de432"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -25,8 +26,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
-            ]
+              "src/styles.css","node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.js"]
           },
           "configurations": {
             "production": {
@@ -62,7 +64,10 @@
               "buildTarget": "my-app:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "port": 4200
+          }
         },
         "test": {
           "builder": "@angular/build:unit-test"
